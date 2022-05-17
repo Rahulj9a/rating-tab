@@ -14,7 +14,7 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
     body{
-    background-color: lightgray;
+    background-color: rgb(151, 176, 197);
     color:aliceblue
     }
     
@@ -47,7 +47,6 @@
     }
     #submit{
       width:90%
-
     }
      
   </style>
@@ -68,11 +67,11 @@
       </p>
     </div>
 <div id="rating-section" class="mt-2" >
-    <button class="rating-box mx-2" > 1 </button>
-    <button class="rating-box mx-2" > 2 </button>
-    <button class="rating-box mx-2" > 3 </button>
-    <button class="rating-box mx-2" > 4 </button>
-    <button class="rating-box mx-2" > 5 </button>
+    <button class="rating-box mx-2" id="v1"> 1 </button>
+    <button class="rating-box mx-2" id="v2"> 2 </button>
+    <button class="rating-box mx-2" id="v3"> 3 </button>
+    <button class="rating-box mx-2" id="v4"> 4 </button>
+    <button class="rating-box mx-2" id="v5"> 5 </button>
 </div>
 
   <button id='submit' type='submit' class="btn btn-warning mt-3 btn-default">Submit</button>
@@ -106,25 +105,7 @@
 </footer>
   
   
-  <script>
-    let rate;
-    const button = document.getElementById('submit');
-    const rating_container = document.getElementById('rating-container')
-    const thanks_container = document.getElementById('thanks-container');
-    const rating_section = document.getElementById('rating-section');
-    button.addEventListener('click', change);
-    rating_section.addEventListener('click', rateIt);
-    function rateIt(e){
-      rate = e.target.innerText 
-    }
-    
-      function change(){
-      rating_container.style.display = 'none';
-      thanks_container.style.display = 'block';
-      rating.innerText = rate;
-    }
+  <script src="./script.js">
   </script>
-
-
 </body>
 </html>
